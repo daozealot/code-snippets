@@ -1,0 +1,21 @@
+
+
+let myArray = [1,2,34,5];
+
+
+ function mPush(value) {
+  this[this.length] = value;
+}
+
+Array.prototype.myPush = mPush;
+
+function mPull() {
+  this.length = this.length - 1;
+}
+
+Array.prototype.myPull = mPull;
+
+myArray.myPush(6);
+console.log(myArray);
+myArray.myPull()
+console.log(myArray);
